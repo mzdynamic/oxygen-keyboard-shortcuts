@@ -21,6 +21,12 @@ function oxygenKeyDownSwitcher(event) {
             event.preventDefault();
             angular.element('#ct-controller-ui').scope().iframeScope.duplicateComponent();
             break;
+           
+        // Edit text block (instead of double-click)
+        case 't':
+            event.preventDefault();
+            angular.element('#ct-controller-ui').scope().enableContentEdit(angular.element('#ct-controller-ui').scope().iframeScope.getActiveComponent());
+            break;
 
         // Common Blocks & Imagery
         case '1':
